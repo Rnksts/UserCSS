@@ -6,7 +6,6 @@
 // @description   Dark theme for the RF Testing Interface
 // @license       CC-BY-SA-4.0
 // @author        Rnksts
-// @homepage      https://github.com/Rnksts/UserCSS
 // @include       https://tester.rainforestqa.com/tester/*
 // @run-at        document-start
 // ==/UserScript==
