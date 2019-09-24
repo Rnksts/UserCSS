@@ -6,7 +6,6 @@
 // @description   Dark Interface for Tester Forum
 // @license       CC-BY-SA-4.0
 // @author        Rnksts, StylishThemes (Original theme: https://github.com/StylishThemes/Discourse-Dark)
-// @homepage      https://github.com/Rnksts/UserCSS
 // @include       https://forum.rainforestqa.com/*
 // @run-at        document-start
 // ==/UserScript==
