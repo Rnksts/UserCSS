@@ -6,7 +6,6 @@
 // @description   Dark Interface for Tester Portal
 // @license       CC-BY-SA-4.0
 // @author        Rnksts
-// @homepage      https://github.com/Rnksts/UserCSS
 // @include       https://portal.rainforestqa.com/*
 // @run-at        document-start
 // ==/UserScript==
