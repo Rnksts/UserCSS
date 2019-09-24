@@ -61,7 +61,8 @@ nav.navigation,
 .mobile-hero-wrap img,
 #shorten_actions .anon_history li + li:before,
 #form_container > p, .sitebanner--spacer,.sitebanner--container,
-a[href="https://bitly.com/pages/features/branded-links"] {
+a[href="https://bitly.com/pages/features/branded-links"],
+a[href="https://bitly.com/pages/pricing"] {
     display: none !important
 }
 .link-container,
