@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          RF Portal - Dark
 // @namespace     Rnksts
-// @version       1.0.0
+// @version       1.0.1
 // @homepage      https://github.com/Rnksts/UserCSS
 // @description   Dark Interface for Tester Portal
 // @license       CC-BY-SA-4.0
@@ -55,7 +55,7 @@ li.divider {
     border-bottom-color: var(--inbd) !important;
 }
 .dropdown-menu li a {
-    color: var(--text) !important;
+    color: var(--txt) !important;
 }
 .dropdown-menu li a:hover {
     background-color: #22222280 !important;
@@ -104,7 +104,7 @@ table tr {
 }
 table#info tr th {
     background-color: var(--bg2) !important;
-    color: var(--text) !important;
+    color: var(--txt) !important;
 }
 table#info tr td,
 .update-payment-method.active {
@@ -126,7 +126,7 @@ span.review-approved {
 .pagination ul li span {
     background-color: #ffffff00 !important;
     border: none !important;
-    color: var(--text) !important;
+    color: var(--txt) !important;
 }
 .pagination ul .active span {
     color: var(--accent) !important;
@@ -145,11 +145,11 @@ circle.data-point,
     fill: var(--accent) !important;
 }
 .tick text {
-    fill: var(--text) !important;
+    fill: var(--txt) !important;
 }
 path.domain,
 .tick line {
-    stroke: var(--text) !important;
+    stroke: var(--txt) !important;
 }
 rect.bar,
 .legendOrdinal g g:nth-child(1) rect {
