@@ -1,17 +1,23 @@
 /* ==UserStyle==
 @name           RF Testing Interface - Dark
 @namespace      Rnksts
-@version        1.0.0
+@version        1.0.1
 @homepageURL    https://github.com/Rnksts/UserCSS
 @updateURL      https://raw.githubusercontent.com/Rnksts/UserCSS/master/rftest.user.css
 @description    Dark theme for the RF Testing Interface
 @license        CC-BY-SA-4.0
 @author         Rnksts
-@advanced       dropdown    anims   "Logo color"    {
-df "Default" <<<EOT
+@advanced       dropdown    overl   "Overlay"       {
+ye "Default" <<<EOT
+EOT;
+ne "Transparent" <<<EOT
 div[class^="ReactModal__Overlay"] {
 background-color: rgba(20, 20, 20, .85) !important;
 }
+EOT;
+}
+@advanced       dropdown    anims   "Animations"    {
+df "Default" <<<EOT
 EOT;
 di "Disabled (!)" <<<EOT
 div[class^="ReactModal__Overlay"] {
@@ -122,5 +128,6 @@ div[class^="finished_main"] > div > div:nth-child(5) > div:nth-child(1) {
 input#NPSComment {
     color: #d5d5d5 !important;
 }
+/*[[overl]]*/
 /*[[anims]]*/
 }
