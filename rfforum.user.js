@@ -17,6 +17,9 @@
 .user-menu .quick-access-panel .show-all a {
     background-color: rgba(0, 0, 0, 0) !important;
 }
+.user-menu .quick-access-panel li {
+    background-color: #444444 !important;
+}
 .user-menu .quick-access-panel li span:first-child {
     border: none !important;
 }
