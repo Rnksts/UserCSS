@@ -9,3 +9,4 @@ First, you need a userstyle manager that supports installing [UserCSS](https://g
 ![RF](/images/rf.png) RF Portal - [Install with Stylus](https://raw.githubusercontent.com/Rnksts/UserCSS/master/rfportal.user.css) or [as a userscript](https://raw.githubusercontent.com/Rnksts/UserCSS/master/rfportal.user.js).<br>
 ![RF](/images/rf.png) RF Forum - [Install with Stylus](https://raw.githubusercontent.com/Rnksts/UserCSS/master/rfforum.user.css)... [As a userscript](https://raw.githubusercontent.com/Rnksts/UserCSS/master/rfforum.user.js) it kinda works.<br>
 ![RF](/images/rf.png) RF Testing Interface - [Install with Stylus](https://raw.githubusercontent.com/Rnksts/UserCSS/master/rftest.user.css) or [as a userscript](https://raw.githubusercontent.com/Rnksts/UserCSS/master/rftest.user.js).<br>
+![RF](/images/rf.png) RF Support - [Install with Stylus](https://raw.githubusercontent.com/Rnksts/UserCSS/master/rfsupport.user.css).
