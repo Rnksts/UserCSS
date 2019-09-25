@@ -1,0 +1,243 @@
+/* ==UserStyle==
+@name           RF Support - Dark
+@namespace      Rnksts
+@version        1.0.0
+@homepageURL    https://github.com/Rnksts/UserCSS
+@updateURL      https://raw.githubusercontent.com/Rnksts/UserCSS/master/rfsupport.user.css
+@description    Dark Interface for Tester Support
+@license        CC-BY-SA-4.0
+@author         Rnksts
+@advanced       color       bg              "Background"        #151515
+@advanced       color       bg2             "Background2"       #282828
+@advanced       color       txt             "Text"              #CCCCCC
+@advanced       color       txt2            "Text2"             #EAEAEA
+@advanced       color       accent          "Accents"           #278D44
+@advanced       color       inbg            "Input bg"          #000000
+@advanced       color       intxt           "Input text"        #CCCCCC
+@advanced       color       inbd            "Input border"      #414141
+==/UserStyle== */
+@-moz-document domain("testersupport.rainforestqa.com") {
+:root {
+    --bg: /*[[bg]]*/;
+    --bg2: /*[[bg2]]*/;
+    --txt: /*[[txt]]*/;
+    --txt2: /*[[txt2]]*/;
+    --accent: /*[[accent]]*/;
+    --inbg: /*[[inbg]]*/;
+    --intxt: /*[[intxt]]*/;
+    --inbd: /*[[inbd]]*/;
+}
+html,
+body,
+[role="dialog"] {
+    background-color: var(--bg) !important;
+    color: var(--txt) !important;
+}
+.hero {
+    background-image: none !important;
+    background-color: var(--bg2) !important;
+}
+#user-name,
+.blocks-item-link,
+.sidenav-item,
+.article-return-to-top a {
+    color: var(--txt2) !important;
+}
+.user-info > [role="button"]::after,
+.breadcrumbs li a,
+.article-body a,
+.see-all-articles,
+.article-relatives a,
+.striped-list-title,
+.comment-body a,
+.request-follow-up a {
+    color: var(--accent) !important;
+}
+.user-info > [role="button"] {
+    border: none !important;
+}
+.user-info > [role="button"]:hover,
+a.login:hover {
+    background-color: transparent !important;
+}
+.dropdown-menu,
+select,
+input {
+    background-color: var(--inbg) !important;
+    border: 1px solid var(--inbd) !important;
+}
+.dropdown-menu-caret::after,
+.dropdown-menu-caret::before {
+    border-bottom: 6px solid var(--inbd) !important;
+}
+.dropdown-menu [role="menuitem"],
+.breadcrumbs li,
+.notification-dismiss::before,
+.meta-data,
+.collapsible-nav-list li a,
+.no-activities,
+.request-details dt,
+select,
+input,
+[role="heading"],
+[id^="zd-edit-profile"] {
+    color: var(--txt) !important;
+}
+.dropdown-menu [role="menuitem"]:hover {
+    color: var(--txt2) !important;
+    background-color: var(--bg2) !important;
+}
+.dropdown-menu [role="menuitem"][aria-selected="true"] {
+    color: var(--txt2) !important;
+    background-color: var(--bg) !important;
+}
+input[type="search"] {
+    border: 1px solid var(--inbd) !important;
+    background-color: var(--inbg) !important;
+    color: var(--intxt) !important;
+}
+.search::before,
+code {
+    background-color: var(--inbg) !important;
+}
+zd-autocomplete {
+    background-color: var(--inbg) !important;
+    border: 1px solid var(--inbd) !important;
+}
+zd-autocomplete-header {
+    border-bottom: 1px solid var(--inbd) !important;
+    color: var(--txt) !important;
+}
+zd-autocomplete-option {
+    color: var(--txt2) !important;
+    background-color: var(--inbg) !important;
+}
+zd-autocomplete-option:hover,
+div[id^="zd-edit-profile"] div div[role="button"] {
+    background-color: var(--bg2) !important;
+}
+.blocks-item {
+    border: 1px solid var(--accent) !important;
+    color: var(--txt2) !important;
+}
+.blocks-item:hover {
+    border: 1px solid var(--accent) !important;
+    background-color: var(--accent) !important
+}
+.section-tree-title a,
+.article-list-item a,
+.table th,
+.table th a,
+.footer a {
+    color: var(--txt2) !important;
+}
+.article-list-item {
+    border-bottom: 1px solid var(--inbd) !important;
+}
+.article-sidebar,
+.container-divider,
+.article-votes,
+.article-return-to-top,
+.article-relatives,
+.my-activities-sub-nav,
+.table tr,
+.comment,
+.request-sidebar,
+.request-details,
+.dropdown-menu [role="separator"] {
+    border-color: var(--inbd) !important;
+}
+.sidenav-item.current-article {
+    background-color: var(--inbd) !important;
+}
+.sidenav-item:hover {
+    color: var(--txt2) !important;
+    background-color: var(--bg2) !important;
+}
+.notification-notice,
+.satisfaction-box,
+.request-sidebar {
+    color: var(--txt) !important;
+    background-color: var(--bg2) !important;
+    border-color: var(--inbd) !important;
+}
+.notification-icon::before,
+.collapsible-nav-list li[aria-selected="true"] {
+    border-color: var(--accent) !important;
+}
+[role="button"] {
+    border: 1px solid var(--accent) !important;
+    color: var(--txt2) !important;
+}
+[role="button"]:hover,
+[role="button"][aria-selected="true"]:hover,
+.dropdown-toggle[role="button"]:focus,
+.article-subscribe:focus,
+.subscriptions-unsubscribe a:hover {
+    background-color: var(--inbd) !important;
+}
+[role="button"][aria-selected="true"],
+.subscriptions-unsubscribe a {
+    background-color: var(--accent) !important;
+}
+.article-vote {
+    border: 1px solid var(--accent) !important;
+}
+.article-vote::before,
+.article-vote::after {
+    color: var(--txt2) !important;
+}
+.article-vote:hover,
+.article-vote[aria-selected="true"]:hover {
+    background-color: var(--inbd) !important;
+}
+.article-vote[aria-selected="true"] {
+    background-color: var(--accent) !important;
+}
+.my-activities-nav {
+    background-color: var(--bg2) !important;
+    color: var(--txt2) !important;
+}
+.collapsible-nav-list li {
+    color: var(--txt) !important;
+    border-color: var(--txt) !important;
+}
+a.login,
+.activity,
+.footer {
+    border: none !important;
+}
+}
+@-moz-document domain("rainforest.zendesk.com") {
+.modal {
+    background-color: /*[[bg]]*/ !important;
+    color: /*[[txt]]*/ !important;
+}
+.title,
+label {
+    color: /*[[txt]]*/ !important;
+}
+a {
+    color: /*[[accent]]*/ !important;
+}
+input {
+    border-color: /*[[inbd]]*/ !important;
+    background-color: /*[[inbg]]*/ !important;
+    color: /*[[txt]]*/ !important;
+}
+.service,
+input[type="submit"] {
+    background-color: /*[[bg2]]*/ !important;
+    color: /*[[txt]]*/ !important;
+}
+.service:hover,
+input[type="submit"]:hover {
+    background-color: /*[[inbd]]*/ !important;
+    color: /*[[txt2]]*/ !important;
+}
+.flash {
+    color: /*[[txt]]*/ !important;
+    background-color: /*[[bg2]]*/ !important;
+    border-color: /*[[inbd]]*/ !important;
+}
+}
