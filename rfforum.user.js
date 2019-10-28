@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          RF Forum - Discourse Dark
 // @namespace     Rnksts
-// @version       1.0.1
+// @version       1.0.2
 // @homepage      https://github.com/Rnksts/UserCSS
 // @description   Dark Interface for Tester Forum
 // @license       CC-BY-SA-4.0
@@ -34,6 +34,7 @@ div.menu-links-header .menu-links-row li a.active {
 .user-secondary-navigation .nav-stacked a.active {
     color: #d0d0d0 !important;
 }
+a.inline-onebox,
 #topic-progress,
 .user-menu .quick-access-panel li span:first-child {
     color: var(--main-color) !important;
