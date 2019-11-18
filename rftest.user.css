@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           RF Testing Interface - Dark
 @namespace      Rnksts
-@version        1.0.1
+@version        1.0.2
 @homepageURL    https://github.com/Rnksts/UserCSS
 @updateURL      https://raw.githubusercontent.com/Rnksts/UserCSS/master/rftest.user.css
 @description    Dark theme for the RF Testing Interface
@@ -10,7 +10,7 @@
 @advanced       dropdown    overl   "Overlay"       {
 ye "Default" <<<EOT
 EOT;
-ne "Transparent" <<<EOT
+ne "Transparent (!)" <<<EOT
 div[class^="ReactModal__Overlay"] {
 background-color: rgba(20, 20, 20, .85) !important;
 }
