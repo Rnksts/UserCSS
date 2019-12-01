@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           RF Forum - Discourse Dark
 @namespace      Rnksts
-@version        1.0.2
+@version        1.0.3
 @homepageURL    https://github.com/Rnksts/UserCSS
 @updateURL      https://raw.githubusercontent.com/Rnksts/UserCSS/master/rfforum.user.css
 @description    Dark Interface for Tester Forum
@@ -64,7 +64,8 @@ a.inline-onebox,
 }
 .user-stream .excerpt,
 .badge-info,
-.badge-card .badge-contents .badge-link {
+.badge-card .badge-contents .badge-link,
+.custom-header-links li a {
     color: #ccc !important;
 }
 .timeline-fullscreen {
@@ -97,7 +98,8 @@ nav.post-controls .double-button:hover button,
 .more-user-badges a,
 .metadata h3,
 .search-link .blurb,
-.topic-list-item.visited td span a {
+.topic-list-item.visited td a,
+.select-kit-collection .name {
     color: #9a9a9a !important;
 }
 #user-card .badge-section .user-badge,
@@ -109,12 +111,37 @@ nav.post-controls .double-button:hover button,
     background-color: #282828 !important;
     border-top: 1px solid #444444 !important;
 }
+.category-links .category-link a:hover {
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+#suggested-topics .topics .topic-list thead th {
+    background: #151515 !important;
+    border-color: #444 !important;
+}
+.user-content,
+.user-content .details,
+.user-content .badge-card .badge-icon,
+.user-stream .user-stream-item,
+.granted-on,
+.container.show-badge .badge-icon {
+    background: #151515 !important;
+    color: #aaa !important;
+    border-color: #444 !important;
+}
+.select-kit-collection li:hover,
+.select-kit-collection li.is-highlighted,
+.select-kit-collection li.is-selected.is-highlighted {
+    background-color: #333 !important
+}
+.select-kit-body .select-kit-row {
+    background-color: #151515 !important
+}
 /*[[lg]]*/
 /*  
             Discourse Dark
 By:         StylishThemes
 Homepage:   https://github.com/StylishThemes/Discourse-Dark
-Version:    1.1.5
+Version:    1.1.8
 License:    CC-BY-SA-4.0
 */
 html,
@@ -134,7 +161,11 @@ body {
 .topic-area,
 .full-width:not(.woot-banner),
 #topic-title,
-.presence-users {
+.presence-users,
+#main-outlet,
+#list-area,
+.topic-list,
+.topic-body {
     background: transparent !important;
 }
 .d-header,
@@ -175,8 +206,8 @@ input,
 #reply-control textarea,
 #reply-control select,
 #reply-control .tag-chooser,
-.modal-inner-container,
 .badge-notification,
+.modal-inner-container,
 .select2-drop,
 .select-kit-body,
 .select-kit-header,
@@ -198,7 +229,13 @@ div.ac-wrap,
     color: #ddd !important;
     border-color: #444 !important;
 }
-.list-controls .category-breadcrumb li.bullet > .badge-category {
+pre {
+    white-space: pre-wrap;
+    word-break: break-all;
+    overflow-wrap: break-word;
+}
+.list-controls .category-breadcrumb li.bullet > .badge-category,
+.discourse-tag.box {
     background: #333 !important;
     color: #ddd !important;
 }
@@ -226,13 +263,14 @@ a.mention-group,
 .select2-results .select2-searching,
 .select2-results .select2-selection-limit,
 .details,
-.user-content,
+/*.user-content,*/
 .topic-map,
 .drop-down-visible .d-header-icons .active .icon,
 .drop-down-visible .d-header .icons .active .icon,
-.drop-down-mode .d-header-icons .active .icon,
-.user-stream .item,
-.user-stream .user-stream-item {
+.drop-down-mode .d-header-icons .active .icon
+/*.user-stream .item,
+.user-stream .user-stream-item*/
+{
     background: #222 !important;
     color: #aaa !important;
     border-color: #444 !important;
@@ -354,7 +392,13 @@ div.poll li[data-poll-option-id],
 .badge-category-bg[style*="background-color: #00683"] + span[style*="color: #000000"],
 .menu-panel a,
 a.widget-link.show-help,
-#sp-logo-dropdown a {
+#sp-logo-dropdown a,
+a.hashtag,
+a.hashtag:visited,
+a.hashtag:hover,
+.category-box-heading a[href],
+.topic-list th,
+td {
     color: #ccc !important;
 }
 .cooked .labels span {
@@ -423,7 +467,8 @@ div.poll .poll-info,
 div.poll .poll-buttons,
 .topic-list thead tr,
 .feedback-popup input,
-.feedback-popup textarea {
+.feedback-popup textarea,
+.category-box-inner {
     border-color: #444 !important;
 }
 #reply-control,
@@ -458,7 +503,7 @@ aside.onebox {
 #list-area .contents .topic-list-item {
     border-bottom-color: transparent !important;
 }
-/* gray */
+/* gray not blue */
 .btn-primary,
 .open .grippie {
     background-color: #383838 !important;
@@ -469,10 +514,13 @@ aside.onebox {
 .alert.alert-info,
 .category-list [data-category-id="7"]:not(.no-logo):not(.has-description) {
     background-color: #454545 !important;
+    /*background-color: #273045 !important;*/
 }
 .user-menu .notifications li,
+/*.badge-notification.new-posts,*/
 .badge-notification.unread-posts {
     background-color: #404040 !important;
+    /*background-color: #303b55 !important;*/
 }
 .alert.alert-info.clickable {
     color: #9daccc;
