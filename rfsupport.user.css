@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           RF Support - Dark
 @namespace      Rnksts
-@version        1.0.0
+@version        1.0.1
 @homepageURL    https://github.com/Rnksts/UserCSS
 @updateURL      https://raw.githubusercontent.com/Rnksts/UserCSS/master/rfsupport.user.css
 @description    Dark Interface for Tester Support
@@ -50,7 +50,8 @@ body,
 .article-relatives a,
 .striped-list-title,
 .comment-body a,
-.request-follow-up a {
+.request-follow-up a,
+a.article-sidebar-item {
     color: var(--accent) !important;
 }
 .user-info > [role="button"] {
