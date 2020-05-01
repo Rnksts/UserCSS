@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          RF Portal - Dark
 // @namespace     Rnksts
-// @version       1.0.2
+// @version       1.0.2.1
 // @homepage      https://github.com/Rnksts/UserCSS
 // @description   Dark Interface for Tester Portal
 // @license       CC-BY-SA-4.0
@@ -10,7 +10,56 @@
 // @run-at        document-start
 // ==/UserScript==
 (function () {
-	let css = [`
+	const accentHeatmap = false; // Set 'true' to re-color the heatmap
+
+	let hm =
+	accentHeatmap === true
+		? `#job_heatmap .legendCells rect.swatch,
+		#job_heatmap rect.hour.bordered {
+			fill: var(--accent) !important;
+		}
+		.legendCells rect.swatch[style="fill: rgb(240, 240, 240);"],
+		#job_heatmap rect.hour.bordered[style="fill: rgb(240, 240, 240);"] {
+			fill-opacity: 0.01 !important;
+		}
+		.legendCells rect.swatch[style="fill: rgb(255, 255, 217);"],
+		#job_heatmap rect.hour.bordered[style="fill: rgb(255, 255, 217);"] {
+			fill-opacity: 0.08 !important;
+		}
+		.legendCells rect.swatch[style="fill: rgb(237, 248, 177);"],
+		#job_heatmap rect.hour.bordered[style="fill: rgb(237, 248, 177);"] {
+			fill-opacity: 0.16 !important;
+		}
+		.legendQuant .legendCells rect.swatch[style="fill: rgb(199, 233, 180);"],
+		#job_heatmap rect.hour.bordered[style="fill: rgb(199, 233, 180);"] {
+			fill-opacity: 0.25 !important;
+		}
+		.legendCells rect.swatch[style="fill: rgb(127, 205, 187);"],
+		#job_heatmap rect.hour.bordered[style="fill: rgb(127, 205, 187);"] {
+			fill-opacity: 0.35 !important;
+		}
+		.legendCells rect.swatch[style="fill: rgb(65, 182, 196);"],
+		#job_heatmap rect.hour.bordered[style="fill: rgb(65, 182, 196);"] {
+			fill-opacity: 0.45 !important;
+		}
+		.legendCells rect.swatch[style="fill: rgb(29, 145, 192);"],
+		#job_heatmap rect.hour.bordered[style="fill: rgb(29, 145, 192);"] {
+			fill-opacity: 0.55 !important;
+		}
+		.legendCells rect.swatch[style="fill: rgb(34, 94, 168);"],
+		#job_heatmap rect.hour.bordered[style="fill: rgb(34, 94, 168);"] {
+			fill-opacity: 0.65 !important;
+		}
+		.legendCells rect.swatch[style="fill: rgb(37, 52, 148);"],
+		#job_heatmap rect.hour.bordered[style="fill: rgb(37, 52, 148);"] {
+			fill-opacity: 0.75 !important;
+		}
+		.legendCells rect.swatch[style="fill: rgb(8, 29, 88);"],
+		#job_heatmap rect.hour.bordered[style="fill: rgb(8, 29, 88);"] {
+			fill-opacity: 1 !important;
+		}`
+		: '';
+	let css = `
 		:root {
 			--bg: #0a0a0a;
 			--bg2: #1c1c1c;
@@ -230,7 +279,7 @@
 		.tester-qualifications li img:not([src*="boy"]) {
 			filter: invert(60%) !important;
 		}
-		img.hexagon /* don't update */ {
+		img.hexagon {
 			content: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEzIiBoZWlnaHQ9IjExMyIgdmlld0JveD0iMCAwIDExMyAxMTMiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTEzIDBIMFYxMTNIMTEzVjBaTTYyLjUgMy40NjQxMUM1OC43ODcxIDEuMzIwNSA1NC4yMTI5IDEuMzIwNSA1MC41IDMuNDY0MTFMMTMuNTY5NiAyNC43ODU5QzkuODU2NjkgMjYuOTI5NSA3LjU2OTU4IDMwLjg5MSA3LjU2OTU4IDM1LjE3ODJWNzcuODIxOEM3LjU2OTU4IDgyLjEwOSA5Ljg1NjY5IDg2LjA3MDUgMTMuNTY5NiA4OC4yMTQxTDUwLjUgMTA5LjUzNkM1NC4yMTI5IDExMS42OCA1OC43ODcxIDExMS42OCA2Mi41IDEwOS41MzZMOTkuNDMwNCA4OC4yMTQxQzEwMy4xNDMgODYuMDcwNSAxMDUuNDMgODIuMTA5IDEwNS40MyA3Ny44MjE4VjM1LjE3ODJDMTA1LjQzIDMwLjg5MSAxMDMuMTQzIDI2LjkyOTUgOTkuNDMwNCAyNC43ODU5TDYyLjUgMy40NjQxMVoiIGZpbGw9IiMwQTBBMEEiLz4KPHBhdGggZD0iTTYxLjI1IDUuNjI5MTdMOTguMTgwNCAyNi45NTFDMTAxLjEyIDI4LjY0OCAxMDIuOTMgMzEuNzg0MiAxMDIuOTMgMzUuMTc4MlY3Ny44MjE4QzEwMi45MyA4MS4yMTU4IDEwMS4xMiA4NC4zNTIgOTguMTgwNCA4Ni4wNDlMNjEuMjUgMTA3LjM3MUM1OC4zMTA3IDEwOS4wNjggNTQuNjg5MyAxMDkuMDY4IDUxLjc1IDEwNy4zNzFMMTQuODE5NiA4Ni4wNDlDMTEuODgwMyA4NC4zNTIgMTAuMDY5NiA4MS4yMTU4IDEwLjA2OTYgNzcuODIxOFYzNS4xNzgyQzEwLjA2OTYgMzEuNzg0MiAxMS44ODAzIDI4LjY0OCAxNC44MTk2IDI2Ljk1MUw1MS43NSA1LjYyOTE3QzU0LjY4OTMgMy45MzIxNSA1OC4zMTA3IDMuOTMyMTUgNjEuMjUgNS42MjkxN1oiIHN0cm9rZT0iIzQxNDE0MSIgc3Ryb2tlLW9wYWNpdHk9IjAuMyIgc3Ryb2tlLXdpZHRoPSI1Ii8+Cjwvc3ZnPg==") !important;
 			filter: saturate(1500%) !important;
 		}
@@ -243,7 +292,8 @@
 		.shelf {
 			border-color: var(--inbd) !important;
 		}
-	`];
+		${hm}
+	`;
 	let node = document.createElement('style');
 	node.type = 'text/css';
 	node.appendChild(document.createTextNode(css));
