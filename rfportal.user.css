@@ -1,318 +1,285 @@
 /* ==UserStyle==
 @name           RF Portal - Dark
 @namespace      Rnksts
-@version        1.0.2
+@version        2.0.0
 @homepageURL    https://github.com/Rnksts/UserCSS
 @updateURL      https://raw.githubusercontent.com/Rnksts/UserCSS/master/rfportal.user.css
 @description    Dark Interface for Tester Portal
 @license        CC-BY-SA-4.0
 @author         Rnksts
-@advanced       color       bg              "Background"        #151515
-@advanced       color       bg2             "Background2"       #282828
-@advanced       color       txt             "Text"              #CCCCCC
-@advanced       color       accent          "Accents"           #278D44
-@advanced       color       bar             "Graph bars"        #282828
-@advanced       color       inbg            "Input bg"          #000000
-@advanced       color       intxt           "Input text"        #CCCCCC
-@advanced       color       inbd            "Input border"      #414141
-@advanced       dropdown    lg              "Logo color"        {
-og "RF Green" <<<EOT
-EOT;
-pr "Pink Red (#E91E63)" <<<EOT
-.navbar-inner img.logo {
-content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMEAAAAjCAYAAAAtzm4VAAAABmJLR0QA/wD/AP+gvaeTAAAMJ0lEQVR42u1cC5RVVRkekx6WpT2sgHvOmUHKB5YrLQ2hwlWRaVmp2EIC55597h2cCrNYpNlKiqBCBF2lrpKVqdhCrURTpIcSSWoT4luBIRkZmLmPmQF0QaDo7fv349x9zz33zjncmeEOa++19pq555y7zzl7/9//+P5/34aGGO25cVPekmtkZ+Ucd37WcVfmbG9zxmZ51XMO24C/9+Zt96puJ31moWHK4Q2mmXYotJ7EjNFZ212Ydbxs1mb7o/aczbYSILaNnvFeM4umDcvWNSr99h6HzYNA744j/CF9R9ZJzi6cmn6zmVXThk3rS6Q/AuF9tkbhL+2O+1jG8ZrM7JpW9y3rpM4fAO0f2hEz9OTs9EQzy6bVLwDs1OeytrdnMACgu0cIoj9mZtu0umvddvJE7r8PLgBU0NyZt9xRZtZNq5vWmZhyBBigp4cCAL5r5LCHCg1z32Rm37S6aHBPfjpIwr47Y6dSmcb06aBYXyo7b3mXHIz3bR/77bdmPjD9HQM1HuVQ1oH9KjQ0HGakaXi0fJN7XMZiJ/EP20clrcGIA8jlwbifVzeF5v9hOWPEcvnj3HcOtduHAP1/8hmvrWWsjO1+B2P1au+z0zBgwyX+Zf9Eb5dsELsmPt3JXoUAPYP/b8XfBdQzdvIKLhQOu4g0/5bG5reFxBwhYyVnD6nVS7hf1IC6/sABwL4c9j59Y9JH1fPiF7Au3fbF43LjWo80IAAIyIzHywR7eyDo1yF+GBN78uH/Azy7QsZ9bihfntwgPMcN6Ld3N7HTDnwSkUWX70BJxbyTPiXbyL5azwufsdwfQEnt48/d1HKyAQFAkLVSX4ih/Z/Mj059uCYtjHqjsLF7RnonDLtJdNzfq+fvHe0lhsMzQ4Et8efdgECAgNyYaCBw/zUQvjsV2YXGD47HImixc3HtOjzLXdC6I/H3QXzuy1rsdu5uNXqTspa7CMfWoG/m52zWAfBe35lg71HjoBzkfRCGNup4/0v9SbHcmeJ4chbRt/jubdzH5/EDmDMoDGnRRojrWI/2DuvpGKzqefwaBMnkHurvi3u10zHdTSw0FA5Tz9LVxBwAaxFZZly7STFnvWOnvQuff45n6ZDK6GXc+z+ZRm9qSaAHBYVzd1OcxbW9uP6v6C0SAG34v0t7nmf4vR13aRwXEP0+fP+/JEDoD+vkBu65GPP4XSIIaD5x/gkc24j/J6tr6P1xbDb6Y3KcTbRGXWPSdkBI/xAWs2Us7yvwSP6m3qvkHI873VXk4fhuOMmFwx5Qz4wxb6J74e9DwhKISerHAngvkeBUm5w7UTFKvvBWCA9pxUrMCx6+LzyI9q6LACAX1xbkd/4t/y+QRpaT9oR/rLyv8YWFA8gH98LiBCbnSSF7yhe4QJKP3osEvMp8tXABAFCrlI+sVALOXcTiubWa29mnAFCNusaiu3ycSXNHQJG8UMGCPyrnp5KCeziqKyXnchMpHvy9WayDtzCgXVeQ8OLvTlz3R/z9HTExPivneP/Asde5EiPQCItKCmVXzmKf1gB1N7nfwdgSY98r1p09FQLSrTj3SEjc1oWx52GO5sv7Z6S8tNONtkQAwXlhk7KjsfnojN18qdC8ZexS2cRSNWmVxbwvBgh4zwnNtgIT3SpdrVmkPdDnYGKnQcul8P92dT1Vw0YCgRRCVMDOxT0u12MmotSoRJyTAQ57vlgO4i6hY90Jdho09Nc1AYQlSrXi/byc0JxKC18cAgJ+PRZuOQmOFISrtZKT5VmnZTzK1M8RzJuo1OVg4QyfP8YDXVbLx7NWejJ/fptNl8KzQFoDOefuUu4JWKmZ/dKJTvIUElw8w/1kCftxMXYJS1weN+LYVWI9vG+Ujp8eKQW4Q2lxWle6ljS5fx28kSxZZoutFOMU75FLNH9Ijj1XAQ6fuwkAmWNnvj8AlgVSLjgIdvVDc7YHE1pc09HCYg+B5s68IATQvQX9xjwQWI7S1JequVuxQABNFIWTx7U/LlqM1BlRQYD3Obt4X++bGpN1hm6u1XG9XFxqKnl9yr+e50qK7/yXIAjwvRd32pe8O6D1tstz23WNiGe9Un2P8hM9jc3Ha2PfqrsDAxETAPy/5HPY5J4cwc8u5BLsrHJihCwkNLLNng9bOyX0SulijLFird2fFOfDvZCO5W3vVKmULtPu3SI9g/Findk59Bnu05VloBZgepWDwGcKKha8uUuCSSEcu0Nqy1cg7L+Axjk2YiBycxXW6fE4IFCatOyaY1qPJP8T46VFZ/dolmNiVBCUCJzNPusH8Pi/PxBkbN933xUUAj+n4LBMEASk6Uuvn3J4qZJJzin24r1V4o/WI7iXo/uDyWMGAgTS/eyLFmx6e8I2VIl8FNbB8paG529S46SCu1ob70Xdq8gJK7lFAqJNd3Mztkdy2afujWuv4IBJJD9T4Vk7lCXY2Q8lmlZfotIKGRQRONriMEU80ERAV+Vea2sFAQVoMhgOjQtIexwICKjqNQ4IcjLuIc0e8g4bpfu3t18QVI89/K4WnejZsjnG+upWrQYQkCv3bETGZXMFa3ISXztUJ4SdJyvINbfj/lZzn36NY/sI5NK9eZkoenmvH9F7ULwqvBOWozXR4s+FfN1lPFIB2Jwdaq9e31NkbciEywVcHZcpEm5SVfbpnlpAIAMgKfDe4zCJXyOh9804+ZZI1g0FCDDmNiWAQbOv4guyCP2BYHXDpBHac66iPESwB6tx6d3IApRQ0QDGOrmhqQYQUGK0M1YWtoIlICYo9LvwKKT78yuNhj5fHpus3Bul2ck1U7KQTXgf5QBCHBh0hbut1CfC78eelJbAXVk9JnAv175E0fqyzsRlR8QrU0hdGKGYbnEtICATq84hMP1kCWXng0MEUYNuCSxvVVEAW8b71KzjnRC0fNVAIMHdI9whtjHOnm2RBKX1EmMTiREEgc7E9Cvclven4HvGBQEF1DjXS+xMuKUg6pO7Q60B67Cfa31KcNpuVp8H4S55y6hSgb5LNLOmjGYIy8IuqhCf9PJnzQu0VBPO+2vLC3hnR9ug482oCQS2t0Q7t5zHBQio5PgF3SwOviXgAZr05fHjA1bqXNqnUcLMgFWLBAIwONr5m3rtlhOJ6cDnCei/Udy6HOc2viGKNCp1TcGRK8vfHYyXbn0xbxfkrFRzBA0/Xbgy3vwDBYFUStfj/BvKNS2JlwR1uZfWJ6CxHyVWCuc2kHsUIA6u5QyQoGI3lLngNnuNYoqgRVZWRbhD0AbVNsof6OYXgfrkHPJ9o/i1OyMUnVV1hxLJ03WB962CmFj1ecJQgIBr4RLOv4xsaCP/NgoIuAvhcE67Uhb/BmFtK9RlaXkCIYR812DwfCbaeiIxRvw+CTLcFFJwWJNvYS2+HxUENE+SCu0i2pi7rEQ8CEtDzND3yq0QV2akSN9QCUvfy3DcM+Xa7lWxQuC7i1QuSSrkCYLtc8kt3cKfVdbzdIRsg+xV1ZCEIpj4T0U1xwQckdmNuuXSbYuYrJEZY7aO6Nbykgw2RQZwr5N2IC5YCuQjlC2EuZ0qM5ZHSyr3loyVnFp025IXqOPrtB8F2A4Loo73gsHQ2IhZ6niwGE3WJy3WaWQeD0CAdBpUJtbEGFicsPfuaUwfnxG06259mypn6aRfz62D4y4rtbqcLbpT16yccXJ4oktZ+n0Ub0TZ18GZN9u7Ud6joAnfz6KCoJgT8O4IKK1OWD0WXmrjTpTX9AV/rEG5WNzSQ7uH1atRkgznX9Hu1UEWMEvMpnrWvIyyS8sYihE8JVNUmp3YItJOYZE9CaFYLO+1mJtrvEO5RoUEbyB+g4kAQ5nhamNFuYbaXAjHan5d/P0PvOwB8RW5YsFsbqw6Jk7rinEGew3UM5NiDwW8zOTuCJQxPM2TO8g6htGoOcHfrqHdYaI+Jp7g6xlS5RqYZtpBbTK63j/UncySmX3T6qKJTDBPHgzdHmPb/bPZjmhaXTXymaoyEQO79bLd/DyjaXXZKAtZsmd2cACwNWq9kWmmHRyLANoNvvq2QQEACsHMRnTThodFENm2vw8sCNy7VPreNNOGRSM+lXYuqZr2Wvz/ShtzTDNtWDT+63SiTHl9TACspZog85Psph1igGBjUUKRlAVrKyDkD/rdQRETNkRkE+603pCssmmm1WP7P2bgpRh/qAmrAAAAAElFTkSuQmCC') !important;
-}
-EOT;
-wh "White" <<<EOT
-.navbar-inner img.logo {
-content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMEAAAAjCAMAAAAaEJ4nAAAC1lBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8T8e+VAAAA8XRSTlMAAQIDBAUGBwgJCgsMDQ4PEBESExQVFhkaGxwdHh8hIiMkJSYnKCkqKywtLi8xMjM0NTY3ODk6Ozw9Pj9AQUNERUZHSElKS0xNTk9QUVJTVFVWV1laW1xdXl9gYWJjZGVmZ2hpamtsbm9wcXJzdHZ3eHl6e3x+f4CB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') !important;
-}
-EOT;
-}
-@advanced       dropdown    hm              "Heatmap colors"    {
-df "Default" <<<EOT
-EOT;
-ct "Accented" <<<EOT
-#job_heatmap .legendCells rect.swatch,
-#job_heatmap rect.hour.bordered {
-   fill: var(--accent) !important;
-}
-.legendCells rect.swatch[style="fill: rgb(240, 240, 240);"],
-#job_heatmap rect.hour.bordered[style="fill: rgb(240, 240, 240);"] {
-    fill-opacity: 0.01 !important;
-}
-.legendCells rect.swatch[style="fill: rgb(255, 255, 217);"],
-#job_heatmap rect.hour.bordered[style="fill: rgb(255, 255, 217);"] {
-    fill-opacity: 0.08 !important;
-}
-.legendCells rect.swatch[style="fill: rgb(237, 248, 177);"],
-#job_heatmap rect.hour.bordered[style="fill: rgb(237, 248, 177);"] {
-    fill-opacity: 0.16 !important;
-}
-.legendQuant .legendCells rect.swatch[style="fill: rgb(199, 233, 180);"],
-#job_heatmap rect.hour.bordered[style="fill: rgb(199, 233, 180);"] {
-    fill-opacity: 0.25 !important;
-}
-.legendCells rect.swatch[style="fill: rgb(127, 205, 187);"],
-#job_heatmap rect.hour.bordered[style="fill: rgb(127, 205, 187);"] {
-    fill-opacity: 0.35 !important;
-}
-.legendCells rect.swatch[style="fill: rgb(65, 182, 196);"],
-#job_heatmap rect.hour.bordered[style="fill: rgb(65, 182, 196);"] {
-    fill-opacity: 0.45 !important;
-}
-.legendCells rect.swatch[style="fill: rgb(29, 145, 192);"],
-#job_heatmap rect.hour.bordered[style="fill: rgb(29, 145, 192);"] {
-    fill-opacity: 0.55 !important;
-}
-.legendCells rect.swatch[style="fill: rgb(34, 94, 168);"],
-#job_heatmap rect.hour.bordered[style="fill: rgb(34, 94, 168);"] {
-    fill-opacity: 0.65 !important;
-}
-.legendCells rect.swatch[style="fill: rgb(37, 52, 148);"],
-#job_heatmap rect.hour.bordered[style="fill: rgb(37, 52, 148);"] {
-    fill-opacity: 0.75 !important;
-}
-.legendCells rect.swatch[style="fill: rgb(8, 29, 88);"],
-#job_heatmap rect.hour.bordered[style="fill: rgb(8, 29, 88);"] {
-    fill-opacity: 1 !important;
-}
-EOT;
-}
+@preprocessor   stylus
+@var color      frgd  "Text color"   #cccccc
+@var color      bkgd  "Background color"   #0a0a0a
+@var color      barColor "Histogram bar color" #353535
+@var color      lineColor "Histogram line color" #23995b
+@var checkbox   heatmap "Re-color heatmap?" 0
+@var color      hmColor "Heatmap (see above)" #23995b
 ==/UserStyle== */
+
+i = !important
+
 @-moz-document domain("portal.rainforestqa.com") {
-:root {
-    --bg: /*[[bg]]*/;
-    --bg2: /*[[bg2]]*/;
-    --txt: /*[[txt]]*/;
-    --accent: /*[[accent]]*/;
-    --bar: /*[[bar]]*/;
-    --inbg: /*[[inbg]]*/;
-    --intxt: /*[[intxt]]*/;
-    --inbd: /*[[inbd]]*/;
-}
-/*[[lg]]*/
-/*[[hm]]*/
-body,
-.modal,
-.modal-footer {
-    background-color: var(--bg) !important;
-    color: var(--txt) !important;
-}
-.navbar-filler {
-    visibility: hidden !important;
-}
-.navbar-inner {
-    background-color: var(--bg2) !important;
-    border-color: var(--bg2) !important;
-    border-bottom-left-radius: 6px !important;
-    border-bottom-right-radius: 6px !important;
-}
-.nav li a {
-    color: var(--txt) !important;
-    text-shadow: none !important;
-    font-size: 15px !important;
-}
-.img-container {
-    border: 1px solid #ffffff3d !important;
-}
-.navbar-inner span.badge {
-    background-color: var(--accent) !important;
-}
-ul.dropdown-menu {
-    background-color: var(--inbg) !important;
-    border-radius: 6px !important;
-    border: 1px solid var(--inbd) !important;
-}
-li.divider {
-    border-bottom-color: var(--inbd) !important;
-}
-.dropdown-menu li a {
-    color: var(--txt) !important;
-}
-.dropdown-menu li a:hover {
-    background-color: #22222280 !important;
-}
-.newsitem,
-.save-wrapper,
-.payment-select {
-    background-color: var(--bg2) !important;
-    border-color: var(--bg2) !important;
-}
-.modal-header,
-.modal-footer {
-    border-color: var(--inbd) !important;
-}
-.modal-footer {
-    -webkit-box-shadow: inset 0 1px 0 var(--inbd) !important;
-}
-span a,
-p a,
-.news-meta,
-small a,
-.small a,
-strong a,
-td a,
-a[target="_blank"],
-.text-center a,
-.text-center p a,
-a.linky,
-.job-column a,
-p.time {
-    color: var(--accent) !important;
-}
-.button.primary {
-    background: var(--accent) !important;
-    border-color: var(--accent) !important;
-}
-code,
-select,
-input,
-.select2-selection,
-.select2-dropdown {
-    border-color: var(--inbd) !important;
-    color: var(--intxt) !important;
-    background-color: var(--inbg) !important;
-}
-.select2-results__option[aria-selected="true"] {
-    background-color: var(--inbd) !important;
-}
-.select2-selection__choice {
-    border-color: var(--inbd) !important;
-    color: var(--intxt) !important;   
-    background-color: var(--inbd) !important;
-}
-.select2-selection__rendered {
-    color: var(--intxt) !important;      
-}
-textarea {
-    border-color: var(--inbd) !important;
-    color: var(--intxt) !important;
-    background-color: #1b1b1b !important;
-}
-hr {
-    border-color: var(--accent) !important;
-}
-table tr {
-    border-bottom: 1px solid var(--inbd) !important;
-}
-table#info tr th {
-    background-color: var(--bg2) !important;
-    color: var(--txt) !important;
-}
-table#info tr td,
-.update-payment-method.active {
-    background-color: var(--inbg) !important;
-    border: 1px solid var(--inbd) !important;
-    color: var(--intxt) !important;
-}
-span.review-approved {
-    color: #87b951 !important;
-    font-weight: 700 !important;
-}
-.job-approved.job-column {
-    background-color: transparent !important;
-    border-top: 5px solid green !important;
-    border-bottom: 2px solid green !important;
-}
-.job-rejected.job-column {
-    background-color: transparent !important;
-    border-top: 5px solid red !important;
-    border-bottom: 2px solid red !important;
-}
-.table th,
-.table td {
-    border-color: var(--inbd) !important;
-}
-.table tbody + tbody {
-    border-color: #6c6c6c !important;
-}
-.job-column.instruction-column {
-    font-size: 16px !important;
-}
-.step-summary,
-a.linky {
-    font-size: 18px !important;
-}
-.input-info-title,
-.input-info-value {
-    font-size: 12px !important;
-}
-.ui-widget-header,
-.ui-dialog {
-    background: none !important;
-    background-color: var(--bg2) !important;
-    border-color: var(--inbd) !important;
-}
-.ui-widget-overlay {
-    background: #000 !important;
-}
-#stbtns {
-    background-color: var(--bg2) !important;
-    color: var(--txt) !important;
-    border-color: var(--accent) !important;
-}
-.stepNav {
-    background-color: var(--bg2) !important;
-}
-.verb.green {
-    color: green !important;
-}
-.verb.red {
-    color: red !important;
-}
-.modal-body h2 span,
-a.btn.btn-success,
-a.btn.btn-danger {
-    color: #fff !important;
-}
-.pagination ul li a,
-.pagination ul li span {
-    background-color: #ffffff00 !important;
-    border: none !important;
-    color: var(--txt) !important;
-}
-.pagination ul .active span {
-    color: var(--accent) !important;
-    border-bottom: 4px solid var(--accent) !important;
-}
-.button.primary {
-    background: var(--accent) !important;
-    border-color: var(--accent) !important;
-}
-path.line {
-    stroke: var(--accent) !important;
-}
-circle.data-point,
-.legendOrdinal g g:nth-child(2) rect {
-    stroke: var(--accent) !important;
-    fill: var(--accent) !important;
-}
-.tick text {
-    fill: var(--txt) !important;
-}
-path.domain,
-.tick line {
-    stroke: var(--txt) !important;
-}
-rect.bar,
-.legendOrdinal g g:nth-child(1) rect {
-    fill: var(--bar) !important;
-}
-.tester-qualifications li img:not([src*="boy"]) {
-    filter: invert(60%) !important;
-}
-img.hexagon {
-    content: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEzIiBoZWlnaHQ9IjExMyIgdmlld0JveD0iMCAwIDExMyAxMTMiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTEzIDBIMFYxMTNIMTEzVjBaTTYyLjUgMy40NjQxMUM1OC43ODcxIDEuMzIwNSA1NC4yMTI5IDEuMzIwNSA1MC41IDMuNDY0MTFMMTMuNTY5NiAyNC43ODU5QzkuODU2NjkgMjYuOTI5NSA3LjU2OTU4IDMwLjg5MSA3LjU2OTU4IDM1LjE3ODJWNzcuODIxOEM3LjU2OTU4IDgyLjEwOSA5Ljg1NjY5IDg2LjA3MDUgMTMuNTY5NiA4OC4yMTQxTDUwLjUgMTA5LjUzNkM1NC4yMTI5IDExMS42OCA1OC43ODcxIDExMS42OCA2Mi41IDEwOS41MzZMOTkuNDMwNCA4OC4yMTQxQzEwMy4xNDMgODYuMDcwNSAxMDUuNDMgODIuMTA5IDEwNS40MyA3Ny44MjE4VjM1LjE3ODJDMTA1LjQzIDMwLjg5MSAxMDMuMTQzIDI2LjkyOTUgOTkuNDMwNCAyNC43ODU5TDYyLjUgMy40NjQxMVoiIGZpbGw9IiMxNTE1MTUiLz4KPHBhdGggZD0iTTYxLjI1IDUuNjI5MTdMOTguMTgwNCAyNi45NTFDMTAxLjEyIDI4LjY0OCAxMDIuOTMgMzEuNzg0MiAxMDIuOTMgMzUuMTc4MlY3Ny44MjE4QzEwMi45MyA4MS4yMTU4IDEwMS4xMiA4NC4zNTIgOTguMTgwNCA4Ni4wNDlMNjEuMjUgMTA3LjM3MUM1OC4zMTA3IDEwOS4wNjggNTQuNjg5MyAxMDkuMDY4IDUxLjc1IDEwNy4zNzFMMTQuODE5NiA4Ni4wNDlDMTEuODgwMyA4NC4zNTIgMTAuMDY5NiA4MS4yMTU4IDEwLjA2OTYgNzcuODIxOFYzNS4xNzgyQzEwLjA2OTYgMzEuNzg0MiAxMS44ODAzIDI4LjY0OCAxNC44MTk2IDI2Ljk1MUw1MS43NSA1LjYyOTE3QzU0LjY4OTMgMy45MzIxNSA1OC4zMTA3IDMuOTMyMTUgNjEuMjUgNS42MjkxN1oiIHN0cm9rZT0iIzQxNDE0MSIgc3Ryb2tlLW9wYWNpdHk9IjAuMyIgc3Ryb2tlLXdpZHRoPSI1Ii8+Cjwvc3ZnPgo=") !important;
-    filter: saturate(1500%) !important;
-}
-.trophy .num, .trophy-icon::before {
-    color: var(--bg) !important;
-}
-.trophy .num {
-    font-weight: bold !important;
-}
-.shelf {
-    border-color: var(--inbd) !important;
-}
+	
+	html,
+	body,
+	.modal-content {
+		color frgd i
+		background bkgd i
+	}
+	
+	.nav-link {
+		color #eee i
+	}
+	.dropdown-menu {
+		color frgd i
+		background lighten(bkgd,5%) i
+		border 1px solid lighten(bkgd,20%) i
+		.dropdown-item {
+			&:hover,
+ 			&:focus {
+				color lighten(frgd,15%) i
+				background lighten(bkgd,20%) i
+			}
+		}
+		.dropdown-divider {
+			border-color lighten(bkgd,20%) i
+		}
+	}
+	
+	.jumbotron {
+		background none i
+	}
+	.card {
+		background bkgd i
+		.card-header {
+			background lighten(bkgd,5%) i
+		}
+	}
+	
+	.shelf {
+		border none i
+	}
+	.trophy {
+		.hexagon {
+			display block i
+			-moz-box-sizing border-box i
+			box-sizing border-box i
+			background url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' cursor='default' viewBox='0 0 113 113'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M113 0H0v113h113V0zM62.5 3.464a12 12 0 00-12 0L13.57 24.786a12 12 0 00-6 10.392v42.644a12 12 0 006 10.392l36.93 21.322a11.998 11.998 0 0012 0l36.93-21.322a12 12 0 006-10.392V35.178a12 12 0 00-6-10.392L62.5 3.464z' fill='%23" + replace('#','','' + bkgd) + "'/%3E%3Cpath d='M61.25 5.63L98.18 26.95a9.499 9.499 0 014.75 8.227v42.644c0 3.394-1.81 6.53-4.75 8.227l-36.93 21.322a9.5 9.5 0 01-9.5 0L14.82 86.049a9.5 9.5 0 01-4.75-8.227V35.178a9.5 9.5 0 014.75-8.227L51.75 5.629a9.5 9.5 0 019.5 0z' stroke='%23CBCED3' stroke-opacity='.5' stroke-width='5'/%3E%3C/svg%3E") no-repeat
+			width 100px
+			height 100px
+			padding-left 100px
+		}
+		&-icon:before {
+			color bkgd i
+		}
+		.num {
+			color bkgd i
+			font-weight bold i
+		}
+	}
+	
+	#pagination {
+		.pagination {
+			margin auto i
+		}
+		.page-link {
+			background none i
+			border none i
+		}
+		.active {
+			font-weight bold i
+		}
+	}
+	
+	#filter,
+	#summary select {
+		color frgd i
+		background lighten(bkgd,5%) i
+		border 1px solid lighten(bkgd,20%) i
+	}
+	
+	table#info {
+		th {
+			color frgd i
+			background none i
+			border-top 1px solid lighten(bkgd,20%) i
+			border-bottom 2px solid lighten(bkgd,20%) i
+		}
+		td {
+			color frgd i
+			background bkgd i
+			&:nth-child(2n+1) {
+				background lighten(bkgd,5%) i
+			}
+		}
+	}
+	
+	.table-striped tbody tr {
+		&:nth-of-type(2n+1) {
+			background lighten(bkgd,5%) i
+		}
+		&:hover {
+			color lighten(frgd,15%) i
+			background lighten(bkgd,10%) i
+		}
+	}
+	
+	.tester-qualifications img {
+		background none i
+		&:not([src*="tester-boy"]) {
+			filter invert(.7) i
+		}
+	}
+	
+	.charts {
+		text {
+			fill darken(frgd,20%) i
+		}
+		path.domain,
+		.tick line {
+			// Fix histogram axes color
+			stroke darken(frgd,40%) i
+		}
+		.bar
+		.legendOrdinal g.cell:nth-child(1) rect, {
+			fill barColor i
+		}
+		.line,
+		.data-point,
+		.legendOrdinal g.cell:nth-child(2) rect, {
+			fill lineColor i
+			stroke lineColor i
+		}
+	}
+	
+	if heatmap {
+		#job_heatmap {
+			.legendCells .swatch,
+			.hour.bordered {
+				fill hmColor i
+			}
+		}
+		@css {
+			#job_heatmap .legendCells .swatch[style="fill: rgb(240, 240, 240);"],
+			#job_heatmap .hour.bordered[style="fill: rgb(240, 240, 240);"] {
+				fill-opacity: 0.01 !important;
+			}
+			#job_heatmap .legendCells .swatch[style="fill: rgb(255, 255, 217);"],
+			#job_heatmap .hour.bordered[style="fill: rgb(255, 255, 217);"] {
+				fill-opacity: 0.08 !important;
+			}
+			#job_heatmap .legendCells .swatch[style="fill: rgb(237, 248, 177);"],
+			#job_heatmap .hour.bordered[style="fill: rgb(237, 248, 177);"] {
+				fill-opacity: 0.16 !important;
+			}
+			#job_heatmap .legendCells .swatch[style="fill: rgb(199, 233, 180);"],
+			#job_heatmap .hour.bordered[style="fill: rgb(199, 233, 180);"] {
+				fill-opacity: 0.25 !important;
+			}
+			#job_heatmap .legendCells .swatch[style="fill: rgb(127, 205, 187);"],
+			#job_heatmap .hour.bordered[style="fill: rgb(127, 205, 187);"] {
+				fill-opacity: 0.35 !important;
+			}
+			#job_heatmap .legendCells .swatch[style="fill: rgb(65, 182, 196);"],
+			#job_heatmap .hour.bordered[style="fill: rgb(65, 182, 196);"] {
+				fill-opacity: 0.45 !important;
+			}
+			#job_heatmap .legendCells .swatch[style="fill: rgb(29, 145, 192);"],
+			#job_heatmap .hour.bordered[style="fill: rgb(29, 145, 192);"] {
+				fill-opacity: 0.55 !important;
+			}
+			#job_heatmap .legendCells .swatch[style="fill: rgb(34, 94, 168);"],
+			#job_heatmap .hour.bordered[style="fill: rgb(34, 94, 168);"] {
+				fill-opacity: 0.65 !important;
+			}
+			#job_heatmap .legendCells .swatch[style="fill: rgb(37, 52, 148);"],
+			#job_heatmap .hour.bordered[style="fill: rgb(37, 52, 148);"] {
+				fill-opacity: 0.75 !important;
+			}
+			#job_heatmap .legendCells .swatch[style="fill: rgb(8, 29, 88);"],
+			#job_heatmap .hour.bordered[style="fill: rgb(8, 29, 88);"] {
+				fill-opacity: 1 !important;
+			}
+		}
+	}
+	
+	.table {
+		color frgd i
+		* {
+			border-color lighten(bkgd,20%) i
+		}
+		td.job-approved {
+			background none i
+			border-top 4px solid green i
+			border-bottom 3px solid green i
+		}
+		td.job-rejected {
+			background none i
+			border-top 4px solid red i
+			border-bottom 3px solid red i
+		}
+		.openScreenshot {
+			color #0099dc i
+		}
+	}
+	.review-approved {
+    color #87b951 i
+    font-weight 700 i
+	}
+	.step-summary {
+		width: 100%;
+		&.small {
+			font-size: 100% i
+		}
+	}
+	canvas.job-step-screenshot.thumb {
+		max-width 300px
+		display block
+		margin-left auto
+		margin-right auto
+	}
+	#stbtns {
+		background lighten(bkgd,5%) i
+		color frgd i
+		border 1px solid lighten(bkgd,20%) i
+	}
+	.vsc-controller + div > #stbtns {
+		display none
+	}
+	.review_actions .btn {
+		color white i
+		&.btn-light {
+			color black i
+		}
+	}
+	textarea,
+	.form-control,
+	.select2-selection {
+		color frgd i
+		background lighten(bkgd,5%) i
+		border-color lighten(bkgd,10%) i
+		&:disabled {
+			color darken(frgd,40%) i
+			background lighten(bkgd,10%) i
+		}
+	}
+	.select2-selection__rendered {
+		color frgd i
+	}
+	.select2-selection__choice {
+		background lighten(bkgd,10%) i
+		border-color lighten(bkgd,15%) i
+	}
+	.payment-select {
+		border-color lighten(bkgd,10%) i
+	}
+	.update-payment-method.active {
+		background lighten(bkgd,5%) i
+		border-color lighten(bkgd,10%) i
+	}
+	.save-wrapper {
+		background lighten(bkgd,5%) i
+		box-shadow 0 1px 8px lighten(bkgd,10%) i
+	}
+	
 }
