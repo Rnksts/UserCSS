@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          RF Portal - Dark
 // @namespace     Rnksts
-// @version       2.0.1
+// @version       2.0.2
 // @homepage      https://github.com/Rnksts/UserCSS
 // @description   Dark Interface for Tester Portal
 // @license       CC-BY-SA-4.0
@@ -230,7 +230,7 @@
     background: none !important;
   }
   .sticky td {
-    color: txt !important;
+    color: #ccc !important;
     text-shadow: #0a0a0a -1px 0px, #0a0a0a 0px 1px, #0a0a0a 1px 0px, #0a0a0a 0px -1px !important;
   }
   .stepNav {
