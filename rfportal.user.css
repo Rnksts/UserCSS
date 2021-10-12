@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           RF Portal - Dark
 @namespace      Rnksts
-@version        2.0.0
+@version        2.0.1
 @homepageURL    https://github.com/Rnksts/UserCSS
 @updateURL      https://raw.githubusercontent.com/Rnksts/UserCSS/master/rfportal.user.css
 @description    Dark Interface for Tester Portal
@@ -26,9 +26,11 @@ i = !important
 		color frgd i
 		background bkgd i
 	}
-	
 	.nav-link {
 		color #eee i
+	}
+	.tester-profile a:not(.btn) {
+		color #0099dc
 	}
 	.dropdown-menu {
 		color frgd i
@@ -238,13 +240,42 @@ i = !important
 		margin-left auto
 		margin-right auto
 	}
-	#stbtns {
+	.stbtn,
+	.stbtn-container-top button,
+	.stbtn-container-bottom button,
+ 	.stepNav button {
 		background lighten(bkgd,5%) i
 		color frgd i
 		border 1px solid lighten(bkgd,20%) i
 	}
-	.vsc-controller + div > #stbtns {
-		display none
+	.inputsPopup {
+		color frgd i
+		.keyPress {
+			border 1px solid lighten(bkgd,30%) i
+		}
+	}
+	.inputData {
+		color #0099dc i
+	}
+	.boxedText {
+		background none i
+	}
+	.sticky td {
+		color txt i
+		text-shadow: bkgd -1px 0px, bkgd 0px 1px, bkgd 1px 0px, bkgd 0px -1px i
+	}
+	.stepNav {
+		background lighten(bkgd,10%) i
+	}
+	.step {
+		word-wrap break-word i
+		.time::before {
+			color #9197a1 i
+		}
+	}
+	.popupitem-container > div {
+		background lighten(bkgd,5%) i
+		border 1px solid lighten(bkgd,20%) i
 	}
 	.review_actions .btn {
 		color white i
