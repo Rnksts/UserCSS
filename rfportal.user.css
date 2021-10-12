@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           RF Portal - Dark
 @namespace      Rnksts
-@version        2.0.1
+@version        2.0.2
 @homepageURL    https://github.com/Rnksts/UserCSS
 @updateURL      https://raw.githubusercontent.com/Rnksts/UserCSS/master/rfportal.user.css
 @description    Dark Interface for Tester Portal
@@ -261,7 +261,7 @@ i = !important
 		background none i
 	}
 	.sticky td {
-		color txt i
+		color frgd i
 		text-shadow: bkgd -1px 0px, bkgd 0px 1px, bkgd 1px 0px, bkgd 0px -1px i
 	}
 	.stepNav {
