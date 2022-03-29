@@ -5,7 +5,6 @@ First, you need a userstyle manager that supports installing [UserCSS](https://g
 
 ## Stylesheets
 
-![Bitly](/images/bitly.png) Bitly Clean - [Install with Stylus](https://raw.githubusercontent.com/Rnksts/UserCSS/master/bitly.user.css) or [as a userscript](https://raw.githubusercontent.com/Rnksts/UserCSS/master/bitly.user.js).<br>
 ![RF](/images/rf.png) RF Portal - [Install with Stylus](https://raw.githubusercontent.com/Rnksts/UserCSS/master/rfportal.user.css) or [as a userscript](https://raw.githubusercontent.com/Rnksts/UserCSS/master/rfportal.user.js).<br>
 ![RF](/images/rf.png) RF Forum - No longer needed.<br>
 ![RF](/images/rf.png) RF Testing Interface - [Install with Stylus](https://raw.githubusercontent.com/Rnksts/UserCSS/master/rftest.user.css) or [as a userscript](https://raw.githubusercontent.com/Rnksts/UserCSS/master/rftest.user.js).<br>
